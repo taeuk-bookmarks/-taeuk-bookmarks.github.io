@@ -24,14 +24,14 @@ tr:nth-child(even) {
 </head>
 <body>
 <div id="docsearch"></div>
-<h1 id="path">Today Bookmarks</h1>
+<h1 id="path">Today Bookmarks {{ page.date | date: "%Y-%m-%d" }}</h1>
 <table style="width:100%">
   <tr>
     <th>Name</th>
     <th>Last modified</th>
   </tr>
         {% for res in site.static_files %}
-          {% if res.path contains 'resources' and res.path contains '{{ page.date | date: "%Y-%m-%d" }}' %}
+          {% if res.path contains 'resources' and res.path contains '{ page.date | date: "%Y-%m-%d" }' %}
             <tr>
               <td><a class="post-link" href="{{ res.path | prepend: site.baseurl }}">{{ res.path | remove:'/resources/' }}</a></td>
               <td>{{ res.modified_time | date: "%-d %b, %Y" }}</td>
