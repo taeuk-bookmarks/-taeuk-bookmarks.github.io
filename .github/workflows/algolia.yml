@@ -1,9 +1,9 @@
 on:
   schedule:
     - cron: '50 14 * * *'
-  # push:
-  #  branches:
-  #    - 'docs'
+  push:
+    branches:
+      - 'docs'
 
 name: Update algolia indexes for docs
 
@@ -15,9 +15,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: set config-date
+        env:
+          TODAY=`date +%Y-%m-%d`
+          YESTERDAY=`date -v-1d +%Y-%m-%d`
         run: |
-          set -i "s/__TODAY_DATE__/${`date +%Y-%m-%d`}/" algolia.config.json
-          set -i "s/__YESTER_DATE__/${`date -v-1d +%Y-%m-%d`}/" algolia.config.json
+          sed -i "s/__TODAY_DATE__/${TODAY}/" algolia.config.json
+          sed -i "s/__YESTER_DATE__/${YESTERDAY}/" algolia.config.json
       - name: Run algolia crawler
         uses: darrenjennings/algolia-docsearch-action@master
         with:
