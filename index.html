@@ -20,6 +20,7 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
 </head>
 <body>
 <div id="docsearch"></div>
@@ -46,5 +47,13 @@ ghpages fileserver v1.0
 <script>
 document.getElementById('path').innerHTML = "Index of " + window.location.pathname;
 </script>
-<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+<script>
+docsearch({
+  container: '#docsearch',
+  indexName: 'taeuk-bookmark',
+  appId: '0BOLUCHQ0E',
+  apiKey: '43f45414abdf81874f07229bfa073de7',
+});
+</script>
 </html>
