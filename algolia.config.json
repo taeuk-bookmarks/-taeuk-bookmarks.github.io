@@ -3,7 +3,7 @@
   "start_urls": [
     "https://taeuk-bookmarks.github.io/"
   ],
-  "stop_urls": ["https://taeuk-bookmarks.github.io/resources/**", "!https://taeuk-bookmarks.github.io/resources/__TODAY_DATE__", "https://taeuk-bookmarks.github.io/resources/!__YESTER_DATE__"],
+  "stop_urls": [],
   "selectors": {
     "lvl0": "h1",
     "lvl1": "h2",
