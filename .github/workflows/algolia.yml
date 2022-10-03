@@ -1,7 +1,9 @@
 on:
-  push:
-    branches:
-      - 'docs'
+  schedule:
+    - cron: '0 12 * * *' # run daily at 12:00 UTC
+  #  push:
+  #  branches:
+  #    - 'docs'
 
 name: Update algolia indexes for docs
 
