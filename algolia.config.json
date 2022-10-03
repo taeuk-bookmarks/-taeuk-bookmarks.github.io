@@ -1,7 +1,8 @@
 {
   "index_name": "taeuk-bookmark",
   "start_urls": [
-    "https://taeuk-bookmarks.github.io/"
+    "https://taeuk-bookmarks.github.io/__YESTER_DATE__",
+    "https://taeuk-bookmarks.github.io/__TODAY_DATE__"
   ],
   "stop_urls": [],
   "selectors": {
