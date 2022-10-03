@@ -15,10 +15,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: set config-date
-        env:
-          TODAY=`date +%Y-%m-%d`
-          YESTERDAY=`date -v-1d +%Y-%m-%d`
         run: |
+          TODAY=`date +%Y-%m-%d`
+          YESTERDAY=`date -d "-1 days" +%Y-%m-%d`
           sed -i "s/__TODAY_DATE__/${TODAY}/" algolia.config.json
           sed -i "s/__YESTER_DATE__/${YESTERDAY}/" algolia.config.json
       - name: Run algolia crawler
