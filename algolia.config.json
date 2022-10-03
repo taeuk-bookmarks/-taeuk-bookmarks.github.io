@@ -1,17 +1,9 @@
 {
   "index_name": "taeuk-bookmark",
   "start_urls": [
-    "https://taeuk-bookmarks.github.io/",
-    {
-       "url": "https://taeuk-bookmarks.github.io/",
-       "selectors_key": "resources/__YESTER_DATE__"
-    },
-    {
-       "url": "https://taeuk-bookmarks.github.io/",
-       "selectors_key": "resources/__TODAY_DATE__"
-    }
+    "https://taeuk-bookmarks.github.io/"
   ],
-  "stop_urls": [],
+  "stop_urls": ["https://taeuk-bookmarks.github.io/resources/*.html"],
   "selectors": {
     "lvl0": "h1",
     "lvl1": "h2",
