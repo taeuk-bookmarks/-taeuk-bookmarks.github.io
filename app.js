@@ -5,7 +5,7 @@ import '@docsearch/css';
 
 docsearch({
   container: '#docsearch',
-  indexName: 'docsearch',
-  appId: 'R2IYF7ETH7',
-  apiKey: '599cec31baffa4868cae4e79f180729b',
+  indexName: 'taeuk-bookmark',
+  appId: '0BOLUCHQ0E',
+  apiKey: '43f45414abdf81874f07229bfa073de7',
 });
