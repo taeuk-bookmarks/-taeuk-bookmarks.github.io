@@ -1,9 +1,7 @@
 on:
   push:
     branches:
-      - '**'
-    paths:
-      - resources/**
+      - 'docs'
 
 name: Update algolia indexes for docs
 
